@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Craetive tabs design using html5 and css3</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+        color: white;
+        font: 1em "arial";
+      }
+      .tabbed {
+        width: 700px;
+        margin: 150px auto;
+      }
+      .tabbed > input {
+        display: none;
+      }
+      .tabbed > label {
+        display: block;
+        float: left;
+        padding: 12px 20px;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .tabbed > label:hover,
+      .tabbed > input:checked + label {
+        background: #e91e73;
+      }
+      .tabs {
+        clear: both;
+        perspective: 599px;
+        margin-left: -50px;
+      }
+      .tabs > div {
+        width: 780px;
+        position: absolute;
+        border: 4px solid #e91e73;
+        padding: 10px 30px 40px;
+        line-height: 1.4em;
+        opacity: 0;
+        transform: rotateX(-20deg);
+        transform-origin: top center;
+        transition: opacity 0.3s, transform 1s;
+        z-index: 0;
+        border-radius: 50px;
+      }
+      #tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
+      #tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
+      #tab-nav-3:checked ~ .tabs > div:nth-of-type(3),
+      #tab-nav-4:checked ~ .tabs > div:nth-of-type(4) {
+        transform: rotate(0);
+        opacity: 1;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabbed">
+      <!-- HTML -->
+      <input type="radio" name="tabs" id="tab-nav-1" checked />
+      <label for="tab-nav-1">HTML</label>
+
+      <!-- CSS -->
+      <input type="radio" name="tabs" id="tab-nav-2" />
+      <label for="tab-nav-2">CSS</label>
+
+      <!-- PHOTOSHOP -->
+      <input type="radio" name="tabs" id="tab-nav-3" />
+      <label for="tab-nav-3">PHOTOSHOP</label>
+
+      <!-- ILLUSTRATOR -->
+      <input type="radio" name="tabs" id="tab-nav-4" />
+      <label for="tab-nav-4">ILLUSTRATOR</label>
+
+      <div class="tabs">
+        <div>
+          <h2>HTML</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+            animi vitae quam incidunt voluptatibus, consectetur nihil dolorem
+            vero ratione aliquam, at perferendis quibusdam deserunt iusto labore
+            velit autem aliquid? Dignissimos?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+            culpa, molestias blanditiis sit ut enim aliquid nam, quasi expedita
+            ea maiores similique aliquam dolorem iste mollitia tempore quos
+            vitae incidunt.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+            magnam, perferendis tenetur deserunt, adipisci, earum neque a
+            cupiditate esse hic voluptatem dolor vitae ab qui accusantium.
+          </p>
+        </div>
+        <div>
+          <h2>CSS</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+            animi vitae quam incidunt voluptatibus, consectetur nihil dolorem
+            vero ratione aliquam, at perferendis quibusdam deserunt iusto labore
+            velit autem aliquid? Dignissimos?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+            culpa, molestias blanditiis sit ut enim aliquid nam, quasi expedita
+            ea maiores similique aliquam dolorem iste mollitia tempore quos
+            vitae incidunt.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+            magnam, perferendis tenetur deserunt, adipisci, earum neque a
+            cupiditate esse hic voluptatem dolor vitae ab qui accusantium.
+          </p>
+        </div>
+        <div>
+          <h2>PHOTOSHOP</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+            animi vitae quam incidunt voluptatibus, consectetur nihil dolorem
+            vero ratione aliquam, at perferendis quibusdam deserunt iusto labore
+            velit autem aliquid? Dignissimos?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+            culpa, molestias blanditiis sit ut enim aliquid nam, quasi expedita
+            ea maiores similique aliquam dolorem iste mollitia tempore quos
+            vitae incidunt.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+            magnam, perferendis tenetur deserunt, adipisci, earum neque a
+            cupiditate esse hic voluptatem dolor vitae ab qui accusantium.
+          </p>
+        </div>
+        <div>
+          <h2>ILLUSTRATOR</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+            animi vitae quam incidunt voluptatibus, consectetur nihil dolorem
+            vero ratione aliquam, at perferendis quibusdam deserunt iusto labore
+            velit autem aliquid? Dignissimos?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+            culpa, molestias blanditiis sit ut enim aliquid nam, quasi expedita
+            ea maiores similique aliquam dolorem iste mollitia tempore quos
+            vitae incidunt.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+            magnam, perferendis tenetur deserunt, adipisci, earum neque a
+            cupiditate esse hic voluptatem dolor vitae ab qui accusantium.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
